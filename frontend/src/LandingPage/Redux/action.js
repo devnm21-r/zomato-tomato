@@ -316,7 +316,7 @@ export const queryRestaurant = (query, cityId) => {
     dispatch(queryRestaurantRequest());
     return axios({
       method: "get",
-      url: ` https://zomato-tomato.tk/api/api/search/restaurant`,
+      url: ` http://localhost:5000/api/search/restaurant`,
       params: {
         q: query,
         city_id: cityId,
@@ -357,7 +357,7 @@ export const userSignup = (payload) => {
     dispatch(userSignupRequest());
     return axios({
       method: "post",
-      url: "https://zomato-tomato.tk/api/api/auth/register",
+      url: "http://localhost:5000/api/auth/register",
       data: payload,
     })
       .then((response) => {
@@ -374,7 +374,7 @@ export const userLogin = (email) => {
     dispatch(userLoginRequest());
     return axios({
       method: "post",
-      url: "https://zomato-tomato.tk/api/api/auth/login",
+      url: "http://localhost:5000/api/auth/login",
       data: { email: email },
     })
       .then((response) => {
@@ -392,7 +392,7 @@ export const userSignupVerify = (payload) => {
     dispatch(userSignupVerifyRequest());
     return axios({
       method: "post",
-      url: "https://zomato-tomato.tk/api/api/auth/verifyRegister",
+      url: "http://localhost:5000th/verifyRegister",
       data: payload,
     })
       .then((response) => {
@@ -409,7 +409,7 @@ export const userLoginVerify = (payload) => {
     dispatch(userLoginVerifyRequest());
     return axios({
       method: "post",
-      url: "https://zomato-tomato.tk/api/api/auth/verifyLogin",
+      url: "http://localhost:5000th/verifyLogin",
       data: payload,
     })
       .then((response) => {
@@ -426,7 +426,7 @@ export const userLoginGoogle = (email) => {
     dispatch(userLoginGoogleRequest());
     return axios({
       method: "post",
-      url: "https://zomato-tomato.tk/api/api/auth/googleLogin",
+      url: "http://localhost:5000/api/auth/googleLogin",
       data: { email: email },
     })
       .then((response) => {
@@ -450,7 +450,7 @@ export const getCityId = (payload) => {
     dispatch(getCityIdRequest());
     return axios({
       method: "post",
-      url: "https://zomato-tomato.tk/api/api/search/cityId",
+      url: "http://localhost:5000arch/cityId",
       data: payload,
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
@@ -470,7 +470,7 @@ export const getCityCollection = (cityId) => {
     dispatch(getCityCollectionRequest());
     return axios({
       method: "post",
-      url: "https://zomato-tomato.tk/api/api/search/collection",
+      url: "http://localhost:5000arch/collection",
       data: { city_id: cityId },
     })
       .then((response) => {
@@ -487,7 +487,7 @@ export const getCityLocalities = (cityId) => {
     dispatch(getCityLocalitiesRequest());
     return axios({
       method: "post",
-      url: "https://zomato-tomato.tk/api/api/search/localities",
+      url: "http://localhost:5000/api/search/localities",
       data: { city_id: cityId },
     })
       .then((response) => {

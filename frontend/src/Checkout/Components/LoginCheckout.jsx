@@ -144,7 +144,7 @@ function LoginCheckout() {
   const paymentHandler = async (e) => {
     e.preventDefault();
 
-    const API_URL = "https://zomato-tomato.tk/api/api/users/";
+    const API_URL = "http://localhost:5000/api/users/";
     const orderUrl = `${API_URL}orderId?amount=${cartValue}`;
     const response = await Axios.get(orderUrl);
     const { data } = response;
@@ -231,7 +231,7 @@ function LoginCheckout() {
   const getActiveUserDetails = () => {
     Axios({
       method: "get",
-      url: `https://zomato-tomato.tk/api/api/users/findById/${activeUserDetails.id}`,
+      url: `http://localhost:5000/api/users/findById/${activeUserDetails.id}`,
     })
       .then((response) => setUserBackendDetails(response.data.user))
       .catch((error) => console.log(error));
@@ -280,7 +280,7 @@ function LoginCheckout() {
     }`;
     Axios({
       method: "post",
-      url: "https://zomato-tomato.tk/api/api/users/addAddress",
+      url: "http://localhost:5000/api/users/addAddress",
       data: {
         id: activeUserDetails.id,
         address: address,
@@ -305,7 +305,7 @@ function LoginCheckout() {
     } else {
       Axios({
         method: "post",
-        url: "https://zomato-tomato.tk/api/api/users/addPhonenumber",
+        url: "http://localhost:5000/api/users/addPhonenumber",
         data: {
           id: activeUserDetails.id,
           phoneNumber: userPhonenumber,

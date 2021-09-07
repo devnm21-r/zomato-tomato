@@ -15,7 +15,7 @@ function PopularLocalities() {
   useEffect(() => {
     axios({
       method: "post",
-      url: "https://zomato-tomato.tk/api/api/search/localities",
+      url: "http://localhost:5000/api/search/localities",
       data: {
         city_id: cityId,
       },

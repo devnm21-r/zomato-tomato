@@ -31,7 +31,7 @@ export const getRestaurant = (payload) => {
     dispatch(restaurantFetchRequest());
     return axios({
       method: "get",
-      url: `https://zomato-tomato.tk/api/api/restaurant/${payload}`,
+      url: `http://localhost:3000/api/restaurant/${payload}`,
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
       },
